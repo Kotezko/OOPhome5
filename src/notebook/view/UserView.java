@@ -3,7 +3,7 @@ package notebook.view;
 import notebook.controller.UserController;
 import notebook.model.User;
 import notebook.util.Commands;
-import notebook.util.mapper.UserValidation;
+
 
 import java.util.Scanner;
 
@@ -53,17 +53,4 @@ public class UserView {
         return in.nextLine();
     }
 
-//    private User createUser() {
-//        UserValidation userValidation = new UserValidation();
-//
-//        String firstName = prompt("Имя: ");
-//        String lastName = prompt("Фамилия: ");
-//        String phone = prompt("Номер телефона: ");
-//        User user = new User(firstName, lastName, phone);
-//        if (userValidation.valid(user)){
-//            return user;
-//        } else {
-//            throw new IllegalArgumentException("Введены некорректные данные");
-//        }
-//    }
 }

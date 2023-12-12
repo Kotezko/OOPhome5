@@ -3,7 +3,6 @@ package notebook.controller;
 import notebook.model.User;
 import notebook.model.repository.GBRepository;
 import notebook.util.mapper.UserValidation;
-import notebook.model.User;
 import notebook.view.UserView;
 
 import java.util.List;
