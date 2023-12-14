@@ -8,6 +8,8 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import java.util.Scanner;
+import java.util.stream.Collectors;
 
 public class UserRepository implements GBRepository {
     private final UserMapper mapper;
@@ -72,8 +74,16 @@ public class UserRepository implements GBRepository {
     }
 
     @Override
-    public boolean delete(Long id) {
-        return false;
+    public void delete(Long i) {
+        List<User> users = new ArrayList<>();
+        users = findAll();
+        users.remove((int) (long)i - 1);
+        long id = 0L;
+        for(User u : users) {
+            id++;
+            u.setId(id);
+        }
+        write(users);
     }
 
     private void write(List<User> users) {

@@ -2,6 +2,7 @@ package notebook.controller;
 
 import notebook.model.User;
 import notebook.model.repository.GBRepository;
+import notebook.model.repository.impl.UserRepository;
 import notebook.util.mapper.UserValidation;
 import notebook.view.UserView;
 
@@ -51,5 +52,8 @@ public class UserController {
         } else {
             throw new IllegalArgumentException("Введены некорректные данные");
         }
+    }
+    public void deleteUser(Long id){
+        repository.delete(id);
     }
 }

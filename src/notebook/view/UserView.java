@@ -43,6 +43,10 @@ public class UserView {
                     String userId = prompt("Enter user id: ");
                     userController.updateUser(userId, UserController.createUser());
                     break;
+                case DELETE:
+                    Long i = Long.parseLong(prompt("введите id пользователя:"));
+                    System.out.println(i);
+                    userController.deleteUser(i);
             }
         }
     }
